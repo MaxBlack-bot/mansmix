@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Header with image -->
+        <div class="header">
+            <img src="https://zafeminizm.ru/wp-content/uploads/2024/05/1winmines.png" alt="MineGame Logo" class="game-logo">
+        </div>
+
+        <!-- 5x5 Grid -->
+        <div class="grid" id="grid">
+            <!-- 25 cells, populated via JavaScript -->
+        </div>
+
+        <!-- Mine count control -->
+        <div class="mine-control">
+            <button onclick="decreaseMines()">-</button>
+            <span id="mineCount">3</span>
+            <button onclick="increaseMines()">+</button>
+        </div>
+
+        <!-- WebSocket URL (hidden element) -->
+        <div id="wss-link" style="display: none;">wss://prod-rnd-websocket-php.100hp.app/socket.io/?EIO=4&transport=websocket</div>
+
+        <!-- Start button -->
+        <button class="start-button" onclick="startGame()">Get Signal</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
